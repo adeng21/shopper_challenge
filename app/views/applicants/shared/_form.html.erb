@@ -1,0 +1,8 @@
+<%= simple_form_for applicant do |f| %>
+	<%= f.input :first_name, placeholder: "john", required: true %>
+	<%= f.input :last_name, placeholder: "doe", required: true %>
+	<%= f.input :email, placeholder: "john@doe.com", required: true %>
+	<%= f.input :region, collection: Applicant::AVAILABLE_REGIONS, required: true %>
+	<%= f.input :phone_type, collection: Applicant::AVAILABLE_PHONE_TYPES, required: true %>
+	<%= f.submit "Submit", class: "btn btn-outline-primary" %>
+<% end %>

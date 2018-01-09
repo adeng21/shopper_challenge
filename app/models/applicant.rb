@@ -9,4 +9,15 @@ class Applicant < ApplicationRecord
 	validates :region, inclusion: AVAILABLE_REGIONS
 	# would use rails enum here but not persisting to DB
 	validates :workflow_state, inclusion: WORKFLOW_STATES
+
+	after_save :after_save_callback
+
+	private
+
+	def after_save_callback
+		Rails.logger.info self.attributes
+		puts "#{self.attributes}"
+		# would never do this in real life but requirements stay dont persist to DB
+		self.destroy
+	end
 end
