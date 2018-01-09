@@ -1,0 +1,17 @@
+<%= content_for :form_header_content do %>
+  Great Success!
+<% end %>
+
+<%= content_for :form_content do %>
+	<p>
+		Thanks for successfully submitting your application.
+	</p>
+	<p>
+		Hang on tight, we will get back to you as soon as possible. In the meantime, if you'd like to make any edits to your application, feel free to do so.
+
+		 <%= form_tag edit_applicant_applicants_path do %>
+    		<%= button_tag "Edit Application", class: "btn btn-outline-primary" %>
+  		<% end %>
+	</p>
+<% end %>
+<%= render "shared/main_form" %>

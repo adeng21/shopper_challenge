@@ -1,0 +1,9 @@
+<%= content_for :form_header_content do %>
+	Update Application
+<% end %>
+
+<%= content_for :form_content do %>
+	<%= render "applicants/shared/form", applicant: @applicant %>
+<% end %>
+
+<%= render "shared/main_form" %>

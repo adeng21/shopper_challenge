@@ -1,6 +1,6 @@
 class ApplicantsController < ApplicationController
 	include Sessionable
-	
+
 	def new
 		@applicant = Applicant.new
 	end
@@ -8,21 +8,23 @@ class ApplicantsController < ApplicationController
 	def create
 		@applicant = Applicant.new(applicant_params)
 		if @applicant.save
-			log_in(@applicant.email)
+			log_in(applicant_params)
 			redirect_to background_check_applicants_path
 		else
-			@errors = @applicant.errors.messages
 			render :new
 		end
 	end
 
-	def edit
+	def edit_applicant
+		@applicant = Applicant.new(applicant_session_params)
 	end
 
 	def background_check
 	end
 
 	def background_check_authorized
+		background_check_authorized!
+		redirect_to confirmation_applicants_path
 	end
 
 	def confirmation
