@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+}
+
+.home-page__hero {
+	height: 100vh;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.home-page__shopper {
+  background-image: image-url('shopper.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  z-index: 0;
+}
+
+.home-page__shopper-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.home-page__content-container {
+  position: relative;
+  margin: auto;
+  padding: 25px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.home-page__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px;
+
+  img {
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+
+   &.text {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+  }
+}
