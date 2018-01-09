@@ -12,6 +12,8 @@ $light: #E1F7E7;
   padding-top: 0;
   
   .main-form__header {
+    display: flex;
+    justify-content: center;
     background-color: $blue;
     padding: $spacing 10px;
   }
