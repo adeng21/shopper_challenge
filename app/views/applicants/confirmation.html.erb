@@ -9,7 +9,7 @@
 	<p>
 		Hang on tight, we will get back to you as soon as possible. In the meantime, if you'd like to make any edits to your application, feel free to do so.
 
-		 <%= form_tag edit_applicant_applicants_path do %>
+		 <%= form_tag edit_applicant_applicants_path, method: :get do %>
     		<%= button_tag "Edit Application", class: "btn btn-outline-primary" %>
   		<% end %>
 	</p>
